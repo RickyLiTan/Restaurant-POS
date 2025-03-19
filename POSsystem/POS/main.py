@@ -41,20 +41,9 @@ Builder.load_file("Screens.kv")
 Builder.load_file("RV.kv")
 Builder.load_file("Layouts.kv")
 
-#usb = Usb(0x0FE6, 0x811E, in_ep=0x81, out_ep=0x02)
+#usb = Usb(USB SLOT OF THE PORT)
 usb = 1
-"""
-Layout Function for background colors
-with self.(WDIGET).canvas.before:
-    Color(rgba=(2, 1, 1, 1))
-    self.bg = Rectangle(pos=self.pos, size=self.size)
-self.(WDIGET).bind(pos=self.update_bg)
-self.(WDIGET).bind(size=self.update_bg)
 
-def update_bg(self, *args):
-    self.bg.pos = self.(WDIGET).pos
-    self.bg.size = self.(WDIGET).size
-"""
 #List of items
 
 #Screens
