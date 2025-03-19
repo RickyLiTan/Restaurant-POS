@@ -1,0 +1,58 @@
+<CustomAmountDisplay>:
+    canvas:
+        Color:
+            rgba: 0, 0, 0, 0
+        Rectangle:
+            pos: self.pos
+            size: self.size
+        Color:
+            rgba: 1,1,1,1
+        Rectangle:
+            pos: self.x+1, self.y+1
+            size: self.width-2, self.height-2
+    orientation: 'vertical'
+    size_hint_x: 0.911
+    size_hint_y: 1
+    height: 800
+    width: 600
+
+
+<MainLayout>:
+    orientation: 'horizontal'
+
+
+<MenuWindows>:
+    canvas:
+        Color:
+            rgba: 0, 0, 0, 0
+        Rectangle:
+            pos: self.pos
+            size: self.size
+        Color:
+            rgba: 1,1,1,1
+        Rectangle:
+            pos: self.x+1, self.y+1
+            size: self.width-2, self.height-2
+    orientation: 'vertical'
+    width: 660
+    height: 200
+    size_hint_x: 1
+    size_hint_y: 1
+
+<ItemsLayout>:
+    canvas:
+        Color:
+            rgba: 0, 0, 0, 0
+        Rectangle:
+            pos: self.pos
+            size: self.size
+        Color:
+            rgba: 1,1,1,1
+        Rectangle:
+            pos: self.x+1, self.y+1
+            size: self.width-2, self.height-2
+    orientation: 'vertical'
+    width: 660
+    height: 200
+    size_hint_x: 1
+    size_hint_y: 1

@@ -1,0 +1,70 @@
+<ItemsClass>:
+    Label:
+        color: 'black'
+        valign: "middle"
+        halign: "center"
+        text: root.QTY +  " x "
+        size_hint_x: None
+        width: 50
+    Label:
+        color: 'black'
+        valign: "middle"
+        halign: "center"
+        text: root.NAME if len(root.NAME) < 20 else root.NAME[:17]+"..."
+        size_hint_x: None
+        width: 200
+    Label:
+        color: 'black'
+        valign: "middle"
+        halign: "center"
+        text: "Notes: " + root.NOTES if len(root.NOTES) < 20 else "Notes: " + root.NOTES[:13]+"..."
+        size_hint_x: None
+        width: 260
+    Button:
+        text: 'Edit'
+        size_hint_x: None
+        width: 75
+        on_state: if self.state == 'normal': root.Edit()
+    Label:
+        color: 'black'
+        valign: "middle"
+        halign: "center"
+        text: root.Price
+        size_hint_x: None
+        width: 75
+
+<ItemsList>:
+    Button:
+        text: f'{root.ID} {root.NAME}'
+        height: 80
+        size_hint_y: None
+        width: 750
+        size_hint_x: None
+        on_state: if self.state == 'normal': root.add()
+
+<TicketsList>:
+    Button:
+        text: root.NAME
+        height: 80
+        size_hint_y: None
+        width: 400
+        size_hint_x: None
+        on_state: if self.state == 'normal': root.view()
+
+<ViewList>:
+    Label:
+        text: root.QTY + " x " + root.NAME + " ... Price: " +  root.PRICE
+        color: 'black'
+        height: 20
+        size_hint_y: None
+        width: 400
+        size_hint_x: None
+
+<TransactionsList>:
+    Button:
+        text: root.NAME
+        height: 80
+        size_hint_y: None
+        width: 400
+        size_hint_x: None
+        on_state: if self.state == 'normal': root.view()
